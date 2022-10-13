@@ -85,9 +85,7 @@ function getMostPopularAuthors(books = [], authors = []) {
     };
     // for each book match it's author id to the authors id from the authors array  & assign it's count the # of times it's been borrowed
     books.forEach((book) =>
-      book.authorId == authorObj.id
-        ? (author.count += book.borrows.length)
-        : (count = 0)
+      book.authorId == authorObj.id ? author.count += book.borrows.length : count = 0
     );
     result.push(author);
   });
