@@ -33,11 +33,11 @@ function getMostCommonGenres(books = []) {
   let result = {};
   // for each book if it's genre does not exist in the result create a new object with {genre:count}
   //if it already exists in the result object increase the value for that genre(count)++
-  for (let i = 0; i < books.length; i++) {
-    if (result[books[i].genre]) {
-      result[books[i].genre]++;
+  for (let idx = 0; idx < books.length; idx++) {
+    if (result[books[idx].genre]) {
+      result[books[idx].genre]++;
     } else {
-      result[books[i].genre] = 1;
+      result[books[idx].genre] = 1;
     }
   }
   //get the keys from the result object and put into an array
